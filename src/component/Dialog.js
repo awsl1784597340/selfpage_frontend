@@ -64,7 +64,10 @@ export default function EasyDialog() {
                 <DialogTitle id="alert-dialog-slide-title">{"Leave a message"}</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
-                        To contact me, please enter your email address and nickname here. You will receive letter in reply
+                        To contact me, please enter your email address and nickname here. You will receive get a reply.
+                    </DialogContentText>
+                    <DialogContentText>
+                        Here is my email:   <code>grandgadsix@sjtu.edu.cn</code>
                     </DialogContentText>
                     <TextField
                         autoFocus

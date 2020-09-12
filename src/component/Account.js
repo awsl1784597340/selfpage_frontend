@@ -53,7 +53,7 @@ const cards = [
         imageTitle:'bilibili',
         link1:'https://space.bilibili.com/34222806',
         link2: 'https://www.bilibili.com/',
-        header:'Bilibili Account',
+        header:'My Bilibili Account',
         content: 'Bilibili plays user submitted videos,' +
             'while featuring a scrolling closed caption commenting system nicknamed "bullet curtain" '
     },
@@ -64,7 +64,7 @@ const cards = [
         imageTitle: 'github',
         link1: 'https://github.com/awsl1784597340',
         link2:'https://github.com/',
-        header: 'Github Account',
+        header: 'My Github Account',
         content: 'GitHub is a development platform inspired by the way you work. '
     },
     {
@@ -74,7 +74,7 @@ const cards = [
         imageTitle: 'gogs',
         link1: 'http://47.106.226.210:3000/',
         link2: 'https://gogs.io/',
-        header: 'Gogs Address',
+        header: 'My Gogs Address',
         content:'Gogs is a painless self-hosted Git service'
     },
 ];
@@ -123,6 +123,7 @@ export default function CenteredGrid(props) {
             </div>
             <Container className={classes.cardGrid} maxWidth="md">
                 {/* End hero unit */}
+
                 <Grid container spacing={4}>
                     {cards.map((card) => (
                         <Grid item key={card.id} xs={12} sm={6} md={4}>
