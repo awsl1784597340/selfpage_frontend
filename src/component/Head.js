@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Head() {
+export default function Head(props) {
     const classes=useStyles
 
     return(
@@ -29,7 +29,7 @@ export default function Head() {
             <Toolbar>
                 <StarsIcon className={classes.icon1} />
                 <Typography variant="h6" color="inherit" noWrap>
-                    HOME
+                    HOMEPAGE
                 </Typography>
             </Toolbar>
         </AppBar>
@@ -38,11 +38,7 @@ export default function Head() {
             <Typography variant="h2" component="h1" gutterBottom color={'primary'}>
                 ShadowStar's Homepage
             </Typography>
-            <Typography variant="h5" component="h2" gutterBottom>
-                {/*{'Pin a footer to the bottom of the viewport.'}*/}
-                {/*{'The footer will move as the main element of the page grows.'}*/}
-            </Typography>
-            <Account/>
+            <Account num={props.num}/>
         </Container>
         </React.Fragment>
     )

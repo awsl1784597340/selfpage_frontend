@@ -80,21 +80,25 @@ const cards = [
 ];
 
 
-export default function CenteredGrid() {
+export default function CenteredGrid(props) {
     const classes = useStyles();
 
     return (
         <main>
-            {/* Hero unit */}
             <div className={classes.heroContent}>
                 <Container maxWidth="sm">
-                    <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+                    <Typography component="h2" variant="h3" align="center" color="textPrimary" gutterBottom>
                         Introduction
                     </Typography>
                     <div>
                     <Typography variant="h5" align="center" color="textSecondary" paragraph>
                         This page is Created on September 12, 2020
                     </Typography>
+                    </div>
+                    <div>
+                        <Typography variant="h5" align="center" color="textSecondary" paragraph>
+                            You are the {props.num.num}th visitor
+                        </Typography>
                     </div>
                     <div>
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>

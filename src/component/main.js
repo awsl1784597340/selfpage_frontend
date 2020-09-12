@@ -22,10 +22,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 function MainApp(props){
     const classes =useStyles()
-    // console.log(props)
     return (
         <div className={classes.root}>
-            <Head/>
+            <Head num={props.data}/>
             <footer className={classes.footer}>
                 <StickyFooter
                     information={props.data}
