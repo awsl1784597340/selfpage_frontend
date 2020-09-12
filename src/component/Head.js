@@ -7,7 +7,6 @@ import Account from "./Account.js"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-// import CameraIcon from '@material-ui/icons/PhotoCamera';
 import StarsIcon from '@material-ui/icons/Stars'
 
 const useStyles = makeStyles((theme) => ({
@@ -37,11 +36,11 @@ export default function Head() {
 
         <Container component="main" className={classes.main} maxWidth="lg">
             <Typography variant="h2" component="h1" gutterBottom color={'primary'}>
-                Homepage by ShadowStar
+                ShadowStar's Homepage
             </Typography>
             <Typography variant="h5" component="h2" gutterBottom>
-                {'Pin a footer to the bottom of the viewport.'}
-                {'The footer will move as the main element of the page grows.'}
+                {/*{'Pin a footer to the bottom of the viewport.'}*/}
+                {/*{'The footer will move as the main element of the page grows.'}*/}
             </Typography>
             <Account/>
         </Container>

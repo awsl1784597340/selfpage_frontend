@@ -8,6 +8,10 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import EasyDialog from './Dialog'
+import bilibili from '../img/bilibili.png'
+import github from '../img/github.jpg'
+import gogs from '../img/gogs.png'
 
 const useStyles = makeStyles((theme) => ({
     icon: {
@@ -43,23 +47,37 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [
     {
-        id:1
+        id:1,
+        image:bilibili,
+        name:'bilibili',
+        imageTitle:'bilibili',
+        link1:'https://space.bilibili.com/34222806',
+        link2: 'https://www.bilibili.com/',
+        header:'Bilibili Account',
+        content: 'Bilibili plays user submitted videos,' +
+            'while featuring a scrolling closed caption commenting system nicknamed "bullet curtain" '
     },
     {
-        id:2
+        id:2,
+        image: github,
+        name:'github',
+        imageTitle: 'github',
+        link1: 'https://github.com/awsl1784597340',
+        link2:'https://github.com/',
+        header: 'Github Account',
+        content: 'GitHub is a development platform inspired by the way you work. '
     },
     {
-        id:3
+        id:3,
+        image: gogs,
+        name: 'gogs',
+        imageTitle: 'gogs',
+        link1: 'http://47.106.226.210:3000/',
+        link2: 'https://gogs.io/',
+        header: 'Gogs Address',
+        content:'Gogs is a painless self-hosted Git service'
     },
-    {
-        id:4
-    },
-    {
-        id:5
-    },
-    {
-        id:6
-    }];
+];
 
 
 export default function CenteredGrid() {
@@ -86,15 +104,13 @@ export default function CenteredGrid() {
                     <div className={classes.heroButtons}>
                         <Grid container spacing={2} justify="center">
                             <Grid item>
-                                <Button variant="contained" color="primary" >
-                                    Main call to action
-                                </Button>
+                                <EasyDialog/>
                             </Grid>
                             <Grid item>
                                 <Button variant="outlined" color="primary" onClick={function () {
                                     window.open("https://github.com/awsl1784597340/selfpage_frontend/blob/master/Intro.md")
                                 }}>
-                                    Secondary action
+                                    More information
                                 </Button>
                             </Grid>
                         </Grid>
@@ -109,23 +125,27 @@ export default function CenteredGrid() {
                             <Card className={classes.card}>
                                 <CardMedia
                                     className={classes.cardMedia}
-                                    image="https://source.unsplash.com/random"
-                                    title="Image title"
+                                    image={card.image}
+                                    title={card.imageTitle}
                                 />
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Heading
+                                        {card.header}
                                     </Typography>
                                     <Typography>
-                                        This is a media card. You can use this section to describe the content.
+                                        {card.content}
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary">
-                                        View
+                                    <Button size="small" color="primary" onClick={()=>{
+                                        window.open(card.link2)
+                                    }}>
+                                        {card.name}
                                     </Button>
-                                    <Button size="small" color="primary">
-                                        Edit
+                                    <Button size="small" color="primary" onClick={()=>{
+                                        window.open(card.link1)
+                                    }}>
+                                        My Account
                                     </Button>
                                 </CardActions>
                             </Card>
