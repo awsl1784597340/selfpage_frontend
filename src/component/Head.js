@@ -24,7 +24,7 @@ export default function Head() {
     const classes=useStyles
 
     return(
-        <div>
+        <React.Fragment>
         <CssBaseline />
         <AppBar position="relative">
             <Toolbar>
@@ -46,7 +46,7 @@ export default function Head() {
             <Account/>
             <Typography variant="body1">Sticky footer placeholder.</Typography>
         </Container>
-        </div>
+        </React.Fragment>
     )
 
 }
