@@ -30,7 +30,7 @@ export default function Head() {
             <Toolbar>
                 <StarsIcon className={classes.icon1} />
                 <Typography variant="h6" color="inherit" noWrap>
-                    Album layout
+                    HOME
                 </Typography>
             </Toolbar>
         </AppBar>
@@ -44,7 +44,6 @@ export default function Head() {
                 {'The footer will move as the main element of the page grows.'}
             </Typography>
             <Account/>
-            <Typography variant="body1">Sticky footer placeholder.</Typography>
         </Container>
         </React.Fragment>
     )
